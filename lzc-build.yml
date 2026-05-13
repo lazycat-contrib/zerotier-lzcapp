@@ -1,0 +1,14 @@
+manifest: ./lzc-manifest.yml
+pkgout: ./
+icon: ./icon.png
+contentdir: ./content
+
+compose_override:
+  services:
+    zerotier:
+      devices:
+        - /dev/net/tun
+      cap_add:
+        - NET_ADMIN
+        - SYS_ADMIN
+        - NET_RAW

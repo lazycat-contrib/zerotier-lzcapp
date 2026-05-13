@@ -1,0 +1,68 @@
+params:
+  - id: zerotier_network_id
+    type: string
+    name: "ZeroTier Network ID"
+    description: "ZeroTier network ID to join (e.g., a1b2c3d4e5f6g7h8)"
+    optional: false
+
+  - id: tz
+    type: string
+    name: "Timezone"
+    description: "Container timezone"
+    default_value: "Etc/UTC"
+    optional: true
+
+  - id: zerotier_local_phys
+    type: string
+    name: "Local Physical Interface"
+    description: "Local physical network interface for ZeroTier"
+    default_value: "enp2s0"
+    optional: true
+
+  - id: zerotier_use_iptables_nft
+    type: bool
+    name: "Use iptables nft"
+    description: "Use iptables nft backend instead of legacy"
+    default_value: false
+    optional: true
+
+  - id: zerotier_gateway_mode
+    type: string
+    name: "Gateway Mode"
+    description: "Gateway mode (inbound, outbound, or both)"
+    default_value: "inbound"
+    optional: true
+
+locales:
+  en:
+    zerotier_network_id:
+      name: "ZeroTier Network ID"
+      description: "ZeroTier network ID to join (e.g., a1b2c3d4e5f6g7h8)"
+    tz:
+      name: "Timezone"
+      description: "Container timezone"
+    zerotier_local_phys:
+      name: "Local Physical Interface"
+      description: "Local physical network interface for ZeroTier"
+    zerotier_use_iptables_nft:
+      name: "Use iptables nft"
+      description: "Use iptables nft backend instead of legacy"
+    zerotier_gateway_mode:
+      name: "Gateway Mode"
+      description: "Gateway mode (inbound, outbound, or both)"
+  zh:
+    zerotier_network_id:
+      name: "ZeroTier 网络 ID"
+      description: "要加入的 ZeroTier 网络 ID（例如 a1b2c3d4e5f6g7h8）"
+    tz:
+      name: "时区"
+      description: "容器时区"
+    zerotier_local_phys:
+      name: "本地物理网口"
+      description: "ZeroTier 使用的本地物理网络接口"
+    zerotier_use_iptables_nft:
+      name: "使用 iptables nft"
+      description: "使用 iptables nft 后端替代传统模式"
+    zerotier_gateway_mode:
+      name: "网关模式"
+      description: "网关模式（inbound 入站、outbound 出站、both 双向）"

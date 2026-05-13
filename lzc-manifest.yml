@@ -1,0 +1,23 @@
+application:
+  subdomain: zerotier
+  upstreams:
+    - location: /
+      backend: file:///lzcapp/pkg/content/index.html
+  public_path:
+    - /
+services:
+  zerotier:
+    # zyclonite/zerotier:router-main
+    image: registry.lazycat.cloud/czyt/zyclonite/zerotier:f2183c7920382051
+    network_mode: "host"
+    environment:
+      - TZ={{.U.tz}}
+      - PUID=999
+      - PGID=994
+      - ZEROTIER_ONE_LOCAL_PHYS={{.U.zerotier_local_phys}}
+      - ZEROTIER_ONE_USE_IPTABLES_NFT={{.U.zerotier_use_iptables_nft}}
+      - ZEROTIER_ONE_GATEWAY_MODE={{.U.zerotier_gateway_mode}}
+      - ZEROTIER_ONE_NETWORK_IDS={{.U.zerotier_network_id}}
+    binds:
+      - /lzcapp/var/zerotier:/var/lib/zerotier-one
+    restart: unless-stopped

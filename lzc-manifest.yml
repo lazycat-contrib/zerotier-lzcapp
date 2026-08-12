@@ -8,7 +8,8 @@ application:
 services:
   zerotier:
     # zyclonite/zerotier:1.16.0
-    image: registry.lazycat.cloud/czyt/zyclonite/zerotier:f2183c7920382051
+    # upstream: docker.io/zyclonite/zerotier:1.16.2
+    image: registry.lazycat.cloud/czyt/zyclonite/zerotier:209460121f392ac1
     network_mode: "host"
     environment:
       - TZ={{.U.tz}}

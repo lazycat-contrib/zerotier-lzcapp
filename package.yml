@@ -1,12 +1,11 @@
 package: community.lazycat.app.zerotier
-version: 1.16.0
+version: 1.16.2
 name: ZeroTier
 description: "ZeroTier VPN router - creates decentralized secure networks"
 min_os_version: 1.5.0
 author: ZeroTier Team
 license: BSL-1.0
 homepage: https://www.zerotier.com
-
 locales:
   en:
     name: "ZeroTier"
@@ -14,7 +13,6 @@ locales:
   zh:
     name: "ZeroTier"
     description: "ZeroTier VPN 路由器 - 创建去中心化安全网络"
-
 permissions:
   required:
     - net.internet

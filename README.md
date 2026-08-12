@@ -27,11 +27,12 @@ This app uses `compose_override` to handle:
 - Device binding: `/dev/net/tun`
 - Capabilities: `NET_ADMIN`, `SYS_ADMIN`, `NET_RAW`
 
-## Next Steps
+## Publishing
 
-1. **Add icon**: Place a 512x512 PNG icon as `icon.png`
-2. **Build**: `lzc-cli project release -o zerotier.lpk`
-3. **Publish**: `lzc-cli appstore publish zerotier.lpk`
+GitHub Actions builds the LPK, creates the versioned GitHub Release asset
+`community.lazycat.app.zerotier-v1.16.0.lpk`, and reconciles the same verified
+package with both the LazyCat official store and the MiaoMiao private store.
+Generated LPK files are not committed to Git.
 
 ## Note
 

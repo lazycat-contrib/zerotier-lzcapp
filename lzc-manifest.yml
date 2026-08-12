@@ -20,4 +20,3 @@ services:
       - ZEROTIER_ONE_NETWORK_IDS={{.U.zerotier_network_id}}
     binds:
       - /lzcapp/var/zerotier:/var/lib/zerotier-one
-    restart: unless-stopped

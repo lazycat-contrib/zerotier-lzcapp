@@ -7,7 +7,7 @@ application:
     - /
 services:
   zerotier:
-    # zyclonite/zerotier:router-main
+    # zyclonite/zerotier:1.16.0
     image: registry.lazycat.cloud/czyt/zyclonite/zerotier:f2183c7920382051
     network_mode: "host"
     environment:
